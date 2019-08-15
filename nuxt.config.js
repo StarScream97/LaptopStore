@@ -15,7 +15,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: process.env.npm_package_description || 'Minimal LaptopStore using Nuxt'
       }
     ],
     link: [{
@@ -113,6 +113,8 @@ export default {
     extend(config, ctx) {}
   },
   env: {
-    baseUrl: 'https://buylaptops.herokuapp.com' || 'https://localhost:3000'
+    baseUrl: process.env.NODE_ENV === 'dev' ?
+      'https://localhost:3000' :
+      'https://laptopstore.herokuapp.com'
   }
 }

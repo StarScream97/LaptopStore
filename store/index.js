@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import VuexPersist from 'vuex-persist';
+// import VuexPersist from 'vuex-persist';
 const axios = require('axios')
 
 const Toast = require('../helpers/sweetAlertToaster')
@@ -12,17 +12,17 @@ Vue.use(Vuex);
 
 
 
-const vuexLocalStorage = new VuexPersist({
-  // key: 'ecommerce',
-  reducer: state => ({
-    user: state.user,
-    cartItemCount: state.cartItemCount,
-    itemToBuy: state.itemToBuy,
-    isLoggedIn: state.isLoggedIn,
-    searchResults: state.searchResults
-  })
-  // storage: window.localStorage,
-})
+// const vuexLocalStorage = new VuexPersist({
+//   // key: 'ecommerce',
+//   reducer: state => ({
+//     user: state.user,
+//     cartItemCount: state.cartItemCount,
+//     itemToBuy: state.itemToBuy,
+//     isLoggedIn: state.isLoggedIn,
+//     searchResults: state.searchResults
+//   })
+//   // storage: window.localStorage,
+// })
 
 
 export const state = () => ({
@@ -158,5 +158,5 @@ export const actions = {
   }
 }
 
-export const plugins = [vuexLocalStorage.plugin]
+// export const plugins = [vuexLocalStorage.plugin]
 // plugins: [vuexLocalStorage.plugin]
