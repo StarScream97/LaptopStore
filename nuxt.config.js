@@ -114,7 +114,6 @@ export default {
   },
   env: {
     baseUrl: process.env.NODE_ENV === 'dev' ?
-      'https://localhost:3000' :
-      'https://laptopstore.herokuapp.com'
+      'https://localhost:3000' : 'https://buylaptops.herokuapp.com'
   }
 }
