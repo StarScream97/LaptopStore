@@ -70,15 +70,15 @@ export default {
    */
   plugins: [{
       src: '~/plugins/VueperSlide',
-      ssr: true
+      ssr: false
     },
     {
       src: '~/plugins/vuex-persist',
-      ssr: true
+      ssr: false
     },
     {
       src: '~plugins/nuxt-quill-plugin.js',
-      ssr: true
+      ssr: false
     },
   ],
   /*
@@ -107,6 +107,7 @@ export default {
    */
   build: {
 
+    vendor: ['vue-stripe-elements-plus', 'vue-agile', 'vue-quill-editor', 'vuex'],
     /*
      ** You can extend webpack config here
      */
