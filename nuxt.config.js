@@ -70,15 +70,15 @@ export default {
    */
   plugins: [{
       src: '~/plugins/VueperSlide',
-      ssr: false
+      ssr: true
     },
     {
       src: '~/plugins/vuex-persist',
-      ssr: false
+      ssr: true
     },
     {
       src: '~plugins/nuxt-quill-plugin.js',
-      ssr: false
+      ssr: true
     },
   ],
   /*
