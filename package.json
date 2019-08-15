@@ -1,0 +1,33 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "Vue/Express Ecommerce Website",
+  "author": "StarScream97",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "https": "^1.0.0",
+    "nuxt": "^2.0.0",
+    "nuxt-vuex-localstorage": "^1.2.6",
+    "sweetalert2": "^8.15.3",
+    "vue-agile": "^1.0.11",
+    "vue-quill-editor": "^3.0.6",
+    "vue-stripe-elements-plus": "^0.2.10",
+    "vueperslides": "^1.20.1",
+    "vuex": "^3.1.1",
+    "vuex-persist": "^2.0.1"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^1.0.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "nodemon": "^1.18.9",
+    "prettier": "^1.16.4"
+  }
+}
