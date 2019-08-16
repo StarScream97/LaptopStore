@@ -86,6 +86,11 @@ export default {
         this.$router.push('/')
       }, 1700)
     }
+  },
+  head() {
+    return {
+      title: 'Login'
+    }
   }
 }
 </script>

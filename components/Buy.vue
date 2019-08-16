@@ -1,11 +1,13 @@
 <template>
   <div class="w-1/3 lg:px-8 lg:py-6 p-4 bg-gray-300 shadow-lg text-gray-800 h-56">
-    <card
-      class="stripe-card flex flex-col px-4 py-4"
-      :class="{ complete }"
-      stripe="pk_test_EnXfmCHj9yNkuufgye3A60iF0005TIYpYG"
-      @change="complete = $event.complete"
-    />
+    <no-ssr>
+      <card
+        class="stripe-card flex flex-col px-4 py-4"
+        :class="{ complete }"
+        stripe="pk_test_EnXfmCHj9yNkuufgye3A60iF0005TIYpYG"
+        @change="complete = $event.complete"
+      />
+    </no-ssr>
     <h5 class="mt-4 ml-4">${{details.amount}}</h5>
     <div class="flex items-center w-full">
       <button

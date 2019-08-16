@@ -81,6 +81,11 @@ export default {
   created() {
     // console.log(this.$route)
     this.product = this.$store.state.itemToBuy
+  },
+  head() {
+    return {
+      title: 'Buy ' + this.product.name
+    }
   }
 }
 </script>

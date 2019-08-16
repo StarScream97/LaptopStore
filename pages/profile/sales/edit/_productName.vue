@@ -4,7 +4,7 @@
       <div class="lg:flex pt-5">
         <div class="md:w-1/3 w-full mt-6">
           <no-ssr>
-            <agile :options="options">
+            <!-- <agile :options="options">
               <div
                 v-for="(image,index) in laptop.productImages"
                 :key="index"
@@ -12,38 +12,21 @@
               >
                 <img class="h-full w-full" :src="image" alt="Laptop Image" />
               </div>
-            </agile>
+            </agile>-->
+            <carousel :autoplay="true" :perPage="1">
+              <slide
+                v-for="(image,index) in laptop.productImages"
+                :key="index"
+                class="slide h-64 rounded overflow-hidden cursor-pointer"
+              >
+                <img class="h-full w-full" :src="image" alt="Laptop Image" />
+              </slide>
+            </carousel>
           </no-ssr>
         </div>
 
-        <!-- Normal Product Description -->
-        <!-- <div class="md:w-2/3 w-full py-6 lg:px-6 px-2 bg-white text-gray-600 relative">
-          <h5 class="font-bold text-3xl">{{laptop.name}}</h5>
-          <div
-              class="quill-editor px-2 py-1 rounded bg-white text-gray-600 text-xl"
-              :content="laptop.description"
-              @change="onEditorChange($event)"
-              v-quill:myQuillEditor="editorOption"
-            ></div>
-          <div class="mt-2 text-gray-700 flex flex-col">
-            <h5 class="font-bold">
-              Price:
-              <span class="font-bold">${{laptop.price}}</span>
-            </h5>
-          </div>
-        </div>-->
-        <!-- End Normal Product Description -->
-
-        <!-- Edit Mode Product Description -->
         <div class="md:w-2/3 w-full py-6 lg:px-6 px-2 bg-white text-gray-600">
           <div class="mt-2">
-            <!-- <textarea
-              class="w-full shadow rounded mt-4 px-2 py-2"
-              name="product-description"
-              id="product-description"
-              cols="30"
-              rows="8"
-            ></textarea>-->
             <h5 class="font-bold text-3xl mb-3">{{laptop.name}}</h5>
             <div
               class="quill-editor px-2 py-1 rounded bg-white text-gray-600"

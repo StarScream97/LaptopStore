@@ -63,6 +63,11 @@ export default {
       this.searchItem(newRoute.query.name)
       //   console.log(newRoute.query.name, oldRoute.query.name)
     }
+  },
+  head() {
+    return {
+      title: 'Search ' + this.$route.query.name
+    }
   }
 }
 </script>

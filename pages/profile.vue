@@ -35,7 +35,12 @@ export default {
   components: {
     Navbar
   },
-  middleware: 'auth'
+  middleware: 'auth',
+  head() {
+    return {
+      title: this.$store.state.user.user.name + ' | Dashboard'
+    }
+  }
 }
 </script>
 

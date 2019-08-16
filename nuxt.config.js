@@ -48,6 +48,7 @@ export default {
       {
         src: 'https://checkout.stripe.com/checkout.js'
       },
+
     ]
   },
   /*
@@ -78,6 +79,10 @@ export default {
     },
     {
       src: '~plugins/nuxt-quill-plugin.js',
+      ssr: false
+    },
+    {
+      src: '~plugins/VueCarousel.js',
       ssr: false
     },
   ],

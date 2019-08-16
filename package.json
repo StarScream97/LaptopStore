@@ -17,6 +17,7 @@
     "nuxt-vuex-localstorage": "^1.2.6",
     "sweetalert2": "^8.15.3",
     "vue-agile": "^1.0.11",
+    "vue-carousel": "^0.18.0",
     "vue-quill-editor": "^3.0.6",
     "vue-stripe-elements-plus": "^0.2.10",
     "vueperslides": "^1.20.1",

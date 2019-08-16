@@ -5,7 +5,16 @@
       <div class="lg:flex pt-5">
         <div class="lg:w-1/3 mt-6 mr-4 overflow-hidden">
           <no-ssr>
-            <agile :options="options">
+            <carousel :autoplay="true" :perPage="1" :navigationEnabled="true">
+              <slide
+                v-for="image in product.productImages"
+                :key="image._id"
+                class="slide h-72 w-full rounded overflow-hidden cursor-pointer"
+              >
+                <img class="h-64" :src="image" :alt="product.name" />
+              </slide>
+            </carousel>
+            <!-- <agile :options="options">
               <div
                 v-for="image in product.productImages"
                 :key="image._id"
@@ -13,7 +22,7 @@
               >
                 <img class="h-64" :src="image" :alt="product.name" />
               </div>
-            </agile>
+            </agile>-->
           </no-ssr>
         </div>
         <div class="lg:w-2/3 w-full py-6 lg:px-6 px-2 bg-white text-gray-600">
@@ -78,6 +87,7 @@ export default {
   },
   data() {
     return {
+      title: '',
       details: {
         amount: '',
         productId: ''
@@ -134,16 +144,16 @@ export default {
       })
       this.$router.push('/buy')
     }
+  },
+  created() {
+    this.title = this.$route.query.name
+  },
+  head() {
+    return {
+      title: this.title
+    }
   }
 }
 </script>
-
-<style scoped>
-/* .buy-card {
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-} */
-</style>
 
 

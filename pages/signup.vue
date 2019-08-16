@@ -130,6 +130,11 @@ export default {
         this.$router.push('/')
       }, 1500)
     }
+  },
+  head() {
+    return {
+      title: 'Signup'
+    }
   }
 }
 </script>
