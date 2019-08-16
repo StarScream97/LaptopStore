@@ -25,13 +25,14 @@
 
     <div class="flex flex-col mt-4">
       <label for="product-description">Product Description</label>
-
-      <div
-        class="quill-editor px-2 py-1 rounded bg-white text-gray-600 text-xl"
-        :content="product.description"
-        @change="onEditorChange($event)"
-        v-quill:myQuillEditor="editorOption"
-      ></div>
+      <no-ssr>
+        <div
+          class="quill-editor px-2 py-1 rounded bg-white text-gray-600 text-xl"
+          :content="product.description"
+          @change="onEditorChange($event)"
+          v-quill:myQuillEditor="editorOption"
+        ></div>
+      </no-ssr>
     </div>
 
     <div class="lg:flex lg:flex-row flex-col mt-4">

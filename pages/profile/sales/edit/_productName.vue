@@ -28,12 +28,14 @@
         <div class="md:w-2/3 w-full py-6 lg:px-6 px-2 bg-white text-gray-600">
           <div class="mt-2">
             <h5 class="font-bold text-3xl mb-3">{{laptop.name}}</h5>
-            <div
-              class="quill-editor px-2 py-1 rounded bg-white text-gray-600"
-              :content="laptop.description"
-              @change="onEditorChange($event)"
-              v-quill:myQuillEditor="editorOption"
-            ></div>
+            <no-ssr>
+              <div
+                class="quill-editor px-2 py-1 rounded bg-white text-gray-600"
+                :content="laptop.description"
+                @change="onEditorChange($event)"
+                v-quill:myQuillEditor="editorOption"
+              ></div>
+            </no-ssr>
           </div>
           <div class="mt-2 text-gray-700 flex flex-col">
             <h5 class="font-bold inline-block">
