@@ -1,7 +1,7 @@
 <template>
   <div class="lg:px-16 px-6 showcase">
     <no-ssr>
-      <agile :options="options">
+      <!-- <agile :options="options">
         <div class="slider-wrapper slide w-full rounded">
           <div class="lg:h-64 h-56 lg:w-3/6">
             <img
@@ -92,7 +92,8 @@
             </div>
           </div>
         </div>
-      </agile>
+      </agile>-->
+      <p>Simple header</p>
     </no-ssr>
   </div>
 </template>
