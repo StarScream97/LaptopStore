@@ -70,10 +70,6 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [{
-      src: '~/plugins/VueperSlide',
-      ssr: false
-    },
-    {
       src: '~/plugins/vuex-persist',
       ssr: false
     },
@@ -83,6 +79,10 @@ export default {
     },
     {
       src: '~plugins/VueCarousel.js',
+      ssr: false
+    },
+    {
+      src: "~plugins/vue-editor.js",
       ssr: false
     },
   ],

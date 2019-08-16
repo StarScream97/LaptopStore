@@ -26,12 +26,17 @@
     <div class="flex flex-col mt-4">
       <label for="product-description">Product Description</label>
       <no-ssr>
-        <div
+        <!-- <div
           class="quill-editor px-2 py-1 rounded bg-white text-gray-600 text-xl"
           :content="product.description"
           @change="onEditorChange($event)"
           v-quill:myQuillEditor="editorOption"
-        ></div>
+        ></div>-->
+        <vue-editor
+          :editorOptions="editorOption"
+          class="quill-editor px-2 py-1 rounded bg-white text-gray-600 text-xl"
+          :content="product.description"
+        ></vue-editor>
       </no-ssr>
     </div>
 
@@ -115,8 +120,12 @@
 <script>
 const axios = require('axios')
 const Toast = require('../../../helpers/sweetAlertToaster')
+import { VueEditor } from 'vue2-editor'
 
 export default {
+  components: {
+    VueEditor
+  },
   data() {
     return {
       product: {
@@ -131,7 +140,7 @@ export default {
       },
       editorOption: {
         // some quill options
-        theme: 'snow',
+        // theme: 'snow',
 
         modules: {
           toolbar: [

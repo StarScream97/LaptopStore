@@ -29,12 +29,17 @@
           <div class="mt-2">
             <h5 class="font-bold text-3xl mb-3">{{laptop.name}}</h5>
             <no-ssr>
-              <div
+              <!-- <div
                 class="quill-editor px-2 py-1 rounded bg-white text-gray-600"
                 :content="laptop.description"
                 @change="onEditorChange($event)"
                 v-quill:myQuillEditor="editorOption"
-              ></div>
+              ></div>-->
+              <vue-editor
+                :editorOptions="editorOption"
+                class="quill-editor px-2 py-1 rounded bg-white text-gray-600 text-xl"
+                v-model="laptop.description"
+              ></vue-editor>
             </no-ssr>
           </div>
           <div class="mt-2 text-gray-700 flex flex-col">
@@ -84,11 +89,13 @@
 <script>
 const axios = require('axios')
 import https from 'https'
-
+import { VueEditor } from 'vue2-editor'
 const Toast = require('../../../../helpers/sweetAlertToaster')
 
 export default {
-  components: {},
+  components: {
+    VueEditor
+  },
   async asyncData(params) {
     const agent = new https.Agent({
       rejectUnauthorized: false
