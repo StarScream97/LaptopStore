@@ -6,7 +6,7 @@
       <h4 class="font-bold text-2xl">Albedo</h4>
     </div>
     <p>A minimalistic laptop store made using Nuxt.</p>
-    <div class="lg:text-center">
+    <!-- <div class="lg:text-center">
       <div class="mt-3">
         <a class="mr-3 hover:text-black" href="https://manishkarki.com.np" target="_blank">
           <i class="fas fa-user-circle"></i>
@@ -23,6 +23,6 @@
           <i class="fab fa-github"></i>
         </a>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
