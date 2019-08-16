@@ -1,7 +1,7 @@
 <template>
   <div class="lg:px-16 px-6 showcase">
     <no-ssr>
-      <!-- <agile :options="options">
+      <agile :options="options">
         <div class="slider-wrapper slide w-full rounded">
           <div class="lg:h-64 h-56 lg:w-3/6">
             <img
@@ -92,8 +92,7 @@
             </div>
           </div>
         </div>
-      </agile>-->
-      <p>Simple header</p>
+      </agile>
     </no-ssr>
   </div>
 </template>
@@ -160,58 +159,6 @@ export default {
 </script>
 
 
-<style scoped>
-.slide {
-  display: flex;
-}
-.showcase {
-  height: 25rem;
-}
-.showcase .slider-wrapper {
-  height: 20rem;
-}
-.showcase-main img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
-.category-title {
-  transition: all 0.5s;
-}
-.category-title:hover {
-  transition: all 0.5s;
-}
-
-/* .slide {
-  height: 450px;
-  object-fit: cover;
-  width: 100%;
-} */
-.showcase-image-text {
-  background: rgb(190, 187, 187);
-  color: white;
-  bottom: 5rem;
-  left: 2rem;
-  height: 6rem;
-  padding: 8px 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-@media (max-width: 900px) {
-  .slide {
-    display: flex;
-    flex-direction: column;
-  }
-  .showcase {
-    height: 40rem;
-  }
-  .showcase .slider-wrapper {
-    height: 40rem;
-  }
-}
-</style>
 
 
