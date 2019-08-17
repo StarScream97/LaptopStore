@@ -74,10 +74,6 @@ export default {
       ssr: false
     },
     {
-      src: '~plugins/nuxt-quill-plugin.js',
-      ssr: false
-    },
-    {
       src: '~plugins/VueCarousel.js',
       ssr: false
     },
