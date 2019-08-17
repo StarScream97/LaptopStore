@@ -23,6 +23,9 @@
         :key="laptop._id"
       ></Laptop>
     </div>
+    <div class="mt-4 rounded">
+      <nuxt-link to="/laptops" class="bg-gray-700 text-white px-6 py-2">>>></nuxt-link>
+    </div>
   </div>
 </template>
 

@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 .page-enter-active,
 .page-leave-active {
   transition: all .3s;
@@ -10,6 +17,19 @@
   opacity: 0;
   /* transform: scale(0.8); */
   transition: all .3s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather";
+}
+
+p {
+  font-family: "Raleway";
 }
 
 

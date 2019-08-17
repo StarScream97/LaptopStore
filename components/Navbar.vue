@@ -6,7 +6,7 @@
           <h4 class="tracking-widest font-bold text-3xl">Albedo</h4>
         </nuxt-link>
       </div>
-      <div class="flex-1 mb-2 lg:w-6/12">
+      <div class="flex-1 lg:w-6/12">
         <form action="#" @submit.prevent="searchProduct">
           <input
             v-model="searchTerm"

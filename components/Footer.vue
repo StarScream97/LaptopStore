@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-gray-700 text-white w-full lg:h-16 h-48 lg:flex items-center lg:justify-between flex-wrap lg:px-16 px-6 py-4"
+    class="bg-gray-700 text-white w-full lg:h-16 h-32 lg:flex items-center lg:justify-between flex-wrap lg:px-16 px-6 py-4"
   >
     <div class>
       <h4 class="font-bold text-2xl">Albedo</h4>

@@ -14,15 +14,6 @@
                 <img class="h-64" :src="image" :alt="product.name" />
               </slide>
             </carousel>
-            <!-- <agile :options="options">
-              <div
-                v-for="image in product.productImages"
-                :key="image._id"
-                class="slide h-72 w-full rounded overflow-hidden cursor-pointer"
-              >
-                <img class="h-64" :src="image" :alt="product.name" />
-              </div>
-            </agile>-->
           </no-ssr>
         </div>
         <div class="lg:w-2/3 w-full py-6 lg:px-6 px-2 bg-white text-gray-600">
@@ -30,13 +21,21 @@
           <div class="mt-2">
             <p v-html="product.description"></p>
           </div>
-          <div class="mt-4 text-xl">
-            <p>Brand: {{product.brand}}</p>
-          </div>
-          <div class="mt-4 text-xl">
-            <p>Color: {{product.color}}</p>
-          </div>
+          <hr class="w-11/12 bg-gray-200 block" />
 
+          <div class="mt-4 text-xl">
+            <p>
+              <span class="font-semibold">Brand</span>
+              :
+              <span class="font-medium">{{product.brand}}</span>
+            </p>
+          </div>
+          <div class="mt-4 text-xl">
+            <p>
+              <span class="font-semibold">Color</span>:
+              <span class="font-medium">{{product.color}}</span>
+            </p>
+          </div>
           <div class="mt-4 text-gray-700 flex flex-col text-2xl">
             <h5 class="font-bold">
               Price:
@@ -53,7 +52,6 @@
         </div>
       </div>
     </div>
-    <!-- <Buy class="mb-12 absolute buy-card" v-if="buyItemShow" :details="details" /> -->
     <Footer />
   </div>
 </template>
@@ -155,5 +153,11 @@ export default {
   }
 }
 </script>
+
+<style>
+hr {
+  height: 2px;
+}
+</style>
 
 

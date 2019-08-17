@@ -26,16 +26,10 @@
     <div class="flex flex-col mt-4">
       <label for="product-description">Product Description</label>
       <no-ssr>
-        <!-- <div
-          class="quill-editor px-2 py-1 rounded bg-white text-gray-600 text-xl"
-          :content="product.description"
-          @change="onEditorChange($event)"
-          v-quill:myQuillEditor="editorOption"
-        ></div>-->
         <vue-editor
           :editorOptions="editorOption"
           class="quill-editor px-2 py-1 rounded bg-white text-gray-600 text-xl"
-          :content="product.description"
+          v-model="product.description"
         ></vue-editor>
       </no-ssr>
     </div>
@@ -93,7 +87,7 @@
       </div>
     </div>
 
-    <div class="flex flex-col mt-2">
+    <!-- <div class="flex flex-col mt-2">
       <label for="product-title">Product Type</label>
       <select
         class="px-2 py-1 rounded bg-white"
@@ -104,7 +98,7 @@
         <option value="Laptop">Laptop</option>
         <option value="Desktop">Desktop</option>
       </select>
-    </div>
+    </div>-->
 
     <div class="mt-8">
       <input
@@ -176,11 +170,11 @@ export default {
     async sellProduct() {
       if (!this.product.productType) {
         // return alert('Please select the product Type')
-        Toast.fire('Oops!', 'Please select the product type.', 'error')
+        return Toast.fire('Oops!', 'Please select the product type.', 'error')
       }
       if (!this.product.color || !this.product.brand) {
         // return alert('Please fill all fields')
-        Toast.fire('Oops!', 'Please fill all fields.', 'error')
+        return Toast.fire('Oops!', 'Please fill all fields.', 'error')
       }
 
       const result = await axios.post(

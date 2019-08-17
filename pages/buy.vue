@@ -9,13 +9,13 @@
           <p>${{product.amount}}</p>
         </div>
       </div>
-
       <card
         class="stripe-card flex flex-col px-4 py-4 text-white mt-8 shadow-md"
         :class="{ complete }"
         stripe="pk_test_EnXfmCHj9yNkuufgye3A60iF0005TIYpYG"
         @change="complete = $event.complete"
       />
+      <p class="text-sm text-gray-500 mt-2">Test card number is 4242-4242-4242-4242</p>
 
       <div class="flex items-center w-full">
         <button
