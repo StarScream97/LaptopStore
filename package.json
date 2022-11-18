@@ -13,7 +13,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "https": "^1.0.0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "nuxt-vuex-localstorage": "^1.2.6",
     "sweetalert2": "^8.15.3",
     "vue-carousel": "^0.18.0",
